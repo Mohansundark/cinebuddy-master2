@@ -1,0 +1,25 @@
+const languages = {
+  All: "all",
+  Hindi: "hi",
+  Tamil: "ta",
+  Telugu: "te",
+  Bengali: "bn",
+  Marathi: "mr",
+  Gujarati: "gu",
+  Kannada: "kn",
+  Malayalam: "ml",
+  Punjabi: "pa",
+  Urdu: "ur",
+  English: "en",
+  French: "fr",
+  Spanish: "es",
+  German: "de",
+  Italian: "it",
+  Japanese: "ja",
+  Korean: "ko",
+  Chinese: "zh",
+  Arabic: "ar",
+  Russian: "ru",
+};
+
+export default languages;

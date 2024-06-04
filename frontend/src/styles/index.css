@@ -1,0 +1,307 @@
+/* Layout */
+:root {
+  --primary: #e50914; /* Netflix Red */
+  --secondary: #fff; /* White */
+  --background: #f9f9f9; /* Light background */
+  --text-light: #000; /* Dark text color */
+  --text-dark: #333;
+  --header-bg: transparent; /* Transparent header */
+  --card-bg: #fff; /* Light card background */
+  --shadow: rgba(0, 0, 0, 0.1); /* Light shadow */
+  --error: #e74c3c; /* Error color */
+}
+
+body {
+  background: var(--background);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+}
+
+header {
+  background: var(--header-bg);
+}
+
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+form {
+  color: var(--text-light);
+}
+
+header a:hover {
+  color: var(--primary);
+}
+
+.pages {
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Homepage */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.language-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  top: -120px;
+  left: 380px;
+  z-index: 0;
+  background: var(--background);
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px 8px var(--shadow);
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.language-filter:hover {
+  box-shadow: 0 5px 10px 8px var(--shadow);
+  transform: scale(1.05);
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 0;
+  background: var(--background);
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  justify-items: center;
+}
+
+.movie-details {
+  background: var(--card-bg);
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 4px 8px var(--shadow);
+  transition: box-shadow 0.3s, transform 0.3s;
+  flex: 1 1 300px;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+
+.movie-details:hover {
+  box-shadow: 0px 5px 10px 10px var(--shadow);
+  transform: scale(1.05);
+}
+
+#language {
+  background: var(--background);
+  font-size: 15px;
+  color: var(--text-light);
+  transition: color 0.3s, transform 0.3s;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+#language:hover {
+  background: #fffdfdf1;
+}
+
+.movie-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  color: var(--primary);
+  transition: color 0.3s;
+}
+
+.movie-details p {
+  margin: 0;
+  font-size: 1em;
+  color: var(--text-dark);
+}
+
+.movie-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: var(--primary);
+  padding: 6px;
+  border-radius: 50%;
+  color: var(--secondary);
+  transition: background 0.3s, color 0.3s;
+}
+
+.movie-details span:hover {
+  background: #bf0b0b;
+}
+
+/* New movie form */
+label, input {
+  display: block;
+}
+
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #fff;
+  color: var(--text-dark);
+  transition: border 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+input:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.022);
+}
+
+form button {
+  background: var(--primary);
+  border: 0;
+  color: var(--secondary);
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #bf0b0b;
+}
+
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+input.error {
+  border: 1px solid var(--error);
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a, nav button {
+  margin-left: 10px;
+}
+
+nav a {
+  color: var(--text-light);
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+nav button {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav button:hover {
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+/* Auth forms */
+form.signup, form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow);
+  background-color: grey;
+}
+
+
+.cast-details {
+  margin-top: 20px;
+}
+
+.cast-details h4 {
+  margin-bottom: 10px;
+}
+
+.cast-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cast-member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cast-image {
+  width: 50px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.cast-member p {
+  margin: 0;
+  font-size: 0.9em;
+}
