@@ -19,7 +19,9 @@ app.use((req, res, next) => {
   console.log(req.path, req.method);
   next();
 });
-
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 app.use("/api/search", searchRoutes);
 app.use("/api/user", userRoutes);
 
