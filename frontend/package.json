@@ -1,5 +1,5 @@
 {
-  "proxy":"https://cinebuddy-master2.onrender.com/",
+  "proxy":"https://cinebuddy-master2.onrender.com",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
