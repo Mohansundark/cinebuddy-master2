@@ -5,7 +5,9 @@ const mongoose = require("mongoose");
 const app = express();
 require("dotenv").config();
 app.use(express.json());
+const cors = require("cors");
 
+app.use(cors());
 // Include Mongoose connection logic
 const mongoURI = process.env.MONGODB_URL; // Replace with your MongoDB connection URI from .env
 
