@@ -19,7 +19,7 @@ const Home = () => {
     setError(null); // Reset the error state before starting the search
 
     try {
-      const response = await fetch("/api/search/movies", {
+      const response = await fetch("https://cinebuddy-master2-oyot-fj1frlbzl-mohansundarks-projects.vercel.app/api/search/movies", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
