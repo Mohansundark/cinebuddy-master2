@@ -71,7 +71,7 @@ const Home = () => {
 
     try {
       console.log("Getting the movieID:", movieId);
-      const response = await fetch(`/api/search/movies/${movieId}/cast`);
+      const response = await fetch(`https://cinebuddy-master2-oyot-fj1frlbzl-mohansundarks-projects.vercel.app/api/search/movies/${movieId}/cast`);
       if (!response.ok) {
         const errorMessage = await response.text();
         throw new Error(errorMessage || "Failed to fetch cast details");
